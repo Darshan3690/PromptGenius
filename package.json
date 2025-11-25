@@ -1,0 +1,14 @@
+{
+  "name": "ai-prompt-enhancer",
+  "version": "1.0.0",
+  "description": "Chrome extension for enhancing AI prompts with CRISPE templates",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": ["chrome-extension", "ai", "prompt", "crispe"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "AI Prompt Enhancer",
+  "version": "1.0",
+  "description": "Transform basic prompts into optimized instructions for AI models.",
+  
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "scripting",
+    "activeTab",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "https://chat.openai.com/*",
+    "https://*.google.com/*",
+    "https://*.anthropic.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AI Prompt Enhancer"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
